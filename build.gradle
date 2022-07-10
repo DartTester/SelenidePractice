@@ -9,11 +9,17 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
 dependencies {
     testImplementation (
             'org.junit.jupiter:junit-jupiter:5.8.2',
             'com.google.guava:guava:31.1-jre',
-            'com.codeborne:selenide:6.5.1',
+            'com.codeborne:selenide:6.6.3',
             'org.slf4j:slf4j-simple:1.7.36'
     )
 }
@@ -22,4 +28,3 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-//
