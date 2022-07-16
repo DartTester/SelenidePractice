@@ -21,7 +21,9 @@ public class SelenideTest extends TestBase {
         // Убедимся, что в списке страниц (Pages) есть страница SoftAssertions
         $(".markdown-body").$(byText("Soft assertions")).click();
         // Убедимся, что в разделе SoftAssertions присутствует пример кода для JUnit 5
-        $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
+        $("#user-content-3-using-junit5-extend-test-class").ancestor("h4")
+                .shouldHave(text("3. Using JUnit5 extend test class:"));
+        //или проще: $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
 
 
         sleep(5000);
